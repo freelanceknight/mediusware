@@ -461,5 +461,5 @@ Route::get('/app/bulk.ly/free/{code}','Auth\RegisterController@validUserRegistra
 Route::post('/app/bulk.ly/free/signUp/{code}','Auth\RegisterController@validUserRegistration');
 
 Route::get('buffer-posts','BufferPostingController@index');
-Route::get('get/buffer-posts','BufferPostingController@getBufferPosts');
+Route::post('search-posts','BufferPostingController@searchPosts');
 

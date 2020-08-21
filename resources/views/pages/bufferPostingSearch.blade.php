@@ -10,14 +10,16 @@
                     {{csrf_field()}}
                     <div class="form-group">
                         <div class="col-md-3">
-                            <input type="text" name="searchText" required>
+                            <input type="text" name="search-text" required>
                         </div>
                         <div class="col-md-3">
-                            <input type="date" name="searchDate" required>
+                            <input type="date" name="search-date" required>
                         </div>
                         <div class="col-md-3">
                             <select name="searchGroup" required>
-
+                                    <option value="all">
+                                        All Groups
+                                    </option>
                                 @foreach($groupTypes as $types)
                                     <option value="{{$types->type}}">
                                         {{$types->type}}
