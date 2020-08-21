@@ -460,3 +460,6 @@ Route::get('/sendPostTest', 'CronController@sendPostTest');
 Route::get('/app/bulk.ly/free/{code}','Auth\RegisterController@validUserRegistrationForm')->name('bulk.free-signup');
 Route::post('/app/bulk.ly/free/signUp/{code}','Auth\RegisterController@validUserRegistration');
 
+Route::get('buffer-posts','BufferPostingController@index');
+Route::get('get/buffer-posts','BufferPostingController@getBufferPosts');
+

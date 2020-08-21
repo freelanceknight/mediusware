@@ -6,7 +6,7 @@
                     <div class="panel-heading">Example Component</div>
 
                     <div class="panel-body">
-                        I'm an example component!
+
                     </div>
                 </div>
             </div>
@@ -16,8 +16,21 @@
 
 <script>
     export default {
+        data() {
+            return {
+                posts: []
+            }
+        },
         mounted() {
             console.log('Component mounted.')
+            let uri = 'http://localhost/mediusware/get/buffer-posts';
+            window.axios.get(uri).then(response => {
+                this.posts = response.data.message;
+                alert(response.data);
+            });
+
         }
+
+
     }
 </script>
